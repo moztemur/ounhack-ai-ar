@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750">
+  <defs>
+    <linearGradient id="g2b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe3ef"/>
+      <stop offset="100%" stop-color="#ffd1e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="750" fill="url(#g2b)"/>
+  <g transform="translate(500,400)">
+    <rect x="-200" y="-40" width="400" height="80" rx="40" fill="#ffffff" opacity="0.95"/>
+    <rect x="-196" y="-36" width="392" height="72" rx="36" fill="#f0f0f0"/>
+    <circle cx="-120" cy="0" r="26" fill="#ff77aa"/>
+    <circle cx="0" cy="0" r="26" fill="#ffa6cc"/>
+    <circle cx="120" cy="0" r="26" fill="#ffd1e6"/>
+  </g>
+  <text x="50%" y="710" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="40" fill="#1b1b1b" opacity="0.9">Hydrating Lip Gloss — Big</text>
+</svg>
+

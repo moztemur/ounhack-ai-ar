@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750">
+  <defs>
+    <linearGradient id="g1b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6d99"/>
+      <stop offset="100%" stop-color="#ffc0d2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="750" fill="url(#g1b)"/>
+  <g transform="translate(500,380)">
+    <rect x="-45" y="-200" width="90" height="200" rx="12" fill="#2b2b2b"/>
+    <rect x="-70" y="10" width="140" height="70" rx="12" fill="#e6e6e6"/>
+    <rect x="-35" y="-240" width="70" height="55" rx="8" fill="#e24e74"/>
+  </g>
+  <text x="50%" y="710" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="40" fill="#1b1b1b" opacity="0.9">Matte Lipstick — Big</text>
+</svg>
+
