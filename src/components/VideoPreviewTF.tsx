@@ -11,12 +11,11 @@ type Props = {
   className?: string
   product?: { category: string[]; color?: { name: string; hex: string } }
   variant?: { color?: { name: string; hex: string } }
-  lipOpacity?: number
 }
 
 // indices moved to drawer implementation
 
-export default function VideoPreviewTF({ isActive, className, product, variant, lipOpacity = 0.55 }: Props) {
+export default function VideoPreviewTF({ isActive, className, product, variant }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
@@ -73,12 +72,12 @@ export default function VideoPreviewTF({ isActive, className, product, variant, 
         await tf.ready()
 
         const model = faceLandmarksDetection.SupportedModels.MediaPipeFaceMesh
-        const detectorConfig = {
-          runtime: 'mediapipe', // or 'tfjs'
-          solutionPath: 'https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh',
-          refineLandmarks: true,
-        }
-        // const detectorConfig =  { runtime: 'tfjs', refineLandmarks: true, maxFaces: 1 }
+        // const detectorConfig = {
+        //   runtime: 'mediapipe', // or 'tfjs'
+        //   solutionPath: 'https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh',
+        //   refineLandmarks: true,
+        // }
+        const detectorConfig =  { runtime: 'tfjs', refineLandmarks: true, maxFaces: 1 }
 
         const detector = await faceLandmarksDetection.createDetector(
           model,
@@ -112,7 +111,7 @@ export default function VideoPreviewTF({ isActive, className, product, variant, 
             const primary = (variant?.color?.hex || product?.color?.hex || '#ff3366')
             // Simple router: if category matches makeup lips lipstick, draw lips
             if (cat[0] === 'Makeup' && cat[1] === 'Lips' && cat[2] === 'Lipstick') {
-              drawLipstick(ctx, kps, c.width, c.height, primary, lipOpacity)
+              drawLipstick(ctx, kps, c.width, c.height, primary)
             }
           }
           rafRef.current = requestAnimationFrame(loop)
@@ -140,7 +139,7 @@ export default function VideoPreviewTF({ isActive, className, product, variant, 
         ctx?.clearRect(0, 0, c.width, c.height)
       }
     }
-  }, [isActive, product, variant, lipOpacity])
+  }, [isActive, product, variant])
 
   if (!isActive) return null
   return (

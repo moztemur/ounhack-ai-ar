@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import products from '../data/products.json'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import VideoPreviewTF from '../components/VideoPreviewTF'
+import { resolvePublicUrl } from '../utils/asset'
 import arConfig from '../config/ar.json'
 
 type ImageSet = { big: string; middle: string; thumbnail: string }
@@ -74,7 +75,7 @@ export default function ProductDetails() {
       <div className="details">
         <div>
           {!showCam && (
-            <img className="detailsImage" src={currentVariant.images?.[activeImageIdx]?.big || currentVariant.image} alt={currentVariant.name} />
+            <img className="detailsImage" src={resolvePublicUrl(currentVariant.images?.[activeImageIdx]?.big || currentVariant.image)} alt={currentVariant.name} />
           )}
           <VideoPreviewTF
             isActive={showCam}
@@ -91,7 +92,7 @@ export default function ProductDetails() {
                   onClick={() => { setShowCam(false); setActiveImageIdx(idx) }}
                   aria-label={`Show image ${idx + 1}`}
                 >
-                  <img src={img.thumbnail} alt={`thumb ${idx + 1}`} />
+                  <img src={resolvePublicUrl(img.thumbnail)} alt={`thumb ${idx + 1}`} />
                 </button>
               ))}
               {(() => {

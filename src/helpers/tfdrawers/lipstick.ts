@@ -9,7 +9,7 @@ export function drawLipstick(
   width: number,
   height: number,
   color: string,
-  opacity: number
+  opacity: number = 0.55
 ) {
   const clamp = (v: number, min: number, max: number) => Math.max(min, Math.min(max, v))
   const getPoint = (idx: number) => ({ x: clamp(keypoints[idx].x, 0, width), y: clamp(keypoints[idx].y, 0, height) })
