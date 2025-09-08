@@ -75,6 +75,8 @@ export default function ProductDetails() {
     if (isPreview) {
       setShowCam(true);
       setActiveImageIdx(-1);
+    } else {
+      setShowCam(false);
     }
   }, [isPreview]);
 
