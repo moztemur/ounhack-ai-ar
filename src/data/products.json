@@ -3,7 +3,6 @@
     "id": "1",
     "name": "Matte Lipstick",
     "price": 14.99,
-    
     "description": "Velvety matte lipstick with long-lasting color and comfortable wear.",
     "category": ["Makeup", "Lips", "Lipstick"],
     "color": { "name": "Rose Pink", "hex": "#FF69B4" },

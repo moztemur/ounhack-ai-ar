@@ -12,10 +12,6 @@ type Props = {
   variant?: { color?: { name: string; hex: string } };
 };
 
-const contours = faceLandmarksDetection.util.getKeypointIndexByContour(
-  faceLandmarksDetection.SupportedModels.MediaPipeFaceMesh
-);
-
 
 export default function VideoPreviewTF(props: Props) {
   const { isActive, className, product, variant } = props;
@@ -32,6 +28,7 @@ export default function VideoPreviewTF(props: Props) {
   const sceneRef = useRef<THREE.Scene | null>(null);
 
   const lipMeshRef = useRef<THREE.Mesh | null>(null);
+  const initRef = useRef<boolean>(false);
 
 
   useEffect(() => {
@@ -69,9 +66,7 @@ export default function VideoPreviewTF(props: Props) {
       sceneRef.current = new THREE.Scene();
 
       const matFill = new THREE.MeshBasicMaterial({
-        // purple
-        // color: 0xff5a8c,
-        color: 0x000000,
+        color: variant?.color?.hex,
         transparent: true,
         opacity: 0.35,
         depthTest: false,
@@ -155,6 +150,10 @@ export default function VideoPreviewTF(props: Props) {
     };
 
     const stopCamera = () => {
+      if (!initRef.current) {
+        return;
+      }
+
       if (streamRef.current) {
         streamRef.current.getTracks().forEach((t) => t.stop());
         streamRef.current = null;
@@ -163,6 +162,12 @@ export default function VideoPreviewTF(props: Props) {
       if (videoRef.current) {
         videoRef.current.srcObject = null;
       }
+
+      containerRef.current?.removeChild(rendererRef.current!.domElement);
+      rendererRef.current = null;
+      cameraRef.current = null;
+      sceneRef.current = null;
+      lipMeshRef.current = null;
     };
 
     const loop = async () => {
@@ -181,6 +186,7 @@ export default function VideoPreviewTF(props: Props) {
       await loadDetector();
       await startCamera();
       loop();
+      initRef.current = true;
     };
 
     if (initTimeoutRef.current) {
@@ -194,6 +200,7 @@ export default function VideoPreviewTF(props: Props) {
         cancelAnimationFrame(rafRef.current);
       }
       stopCamera();
+      initRef.current = false;
     };
   }, [isActive, product, variant]);
 
