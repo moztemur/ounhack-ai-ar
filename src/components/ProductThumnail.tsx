@@ -32,7 +32,7 @@ const VariantImageWithButton = (props: {
   );
 };
 
-const ProductThumnail = (props: { active: number, variant: Variant; isAR: boolean, onChange: (idx: number) => void, children?: React.ReactNode }) => {
+const ProductThumnail = (props: { active: number, variant: Variant; onChange: (idx: number) => void, children?: React.ReactNode }) => {
   const { variant, onChange, active, children } = props;
   if (!variant.images || variant.images.length === 0) {
     return <div className="thumbs">{children}</div>;

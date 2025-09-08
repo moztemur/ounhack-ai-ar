@@ -1,6 +1,14 @@
 import React, { useEffect, useMemo, useState } from "react";
 import products from "../data/products.json";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import {
+  Link,
+  useNavigate,
+  useParams,
+  Route,
+  Routes,
+  useLocation,
+  useMatch,
+} from "react-router-dom";
 import VideoPreviewTF from "../components/VideoPreviewTF";
 import ProductThumnail from "../components/ProductThumnail";
 import CameraThumnail from "../components/CameraThumnail";
@@ -13,6 +21,7 @@ export default function ProductDetails() {
   const items = products as Product[];
   const routeId = String(id);
   const navigate = useNavigate();
+  const isPreview = useMatch("/products/:id/preview");
 
   const { parent, initialVariant } = useMemo(() => {
     const direct = items.find((p) => p.id === routeId);
@@ -62,6 +71,13 @@ export default function ProductDetails() {
     setShowCam(false);
   }, [routeId]);
 
+  useEffect(() => {
+    if (isPreview) {
+      setShowCam(true);
+      setActiveImageIdx(-1);
+    }
+  }, [isPreview]);
+
   const isAR = useMemo(() => {
     const cat = Array.isArray(parent.category)
       ? parent.category[parent.category.length - 1]
@@ -78,35 +94,49 @@ export default function ProductDetails() {
       </Link>
       <div className="details">
         <div>
-          {!showCam && (
-            <img
-              className="detailsImage"
-              src={resolvePublicUrl(
-                currentVariant.images?.[activeImageIdx]?.big ||
-                  currentVariant.image
-              )}
-              alt={currentVariant.name}
+          <Routes>
+            <Route
+              path="preview"
+              element={
+                <VideoPreviewTF
+                  isActive={showCam}
+                  className="detailsImage videoPreview"
+                  product={{ category: parent.category, color: parent.color }}
+                  variant={{ color: currentVariant.color }}
+                />
+              }
             />
-          )}
-          <VideoPreviewTF
-            isActive={showCam}
-            className="detailsImage videoPreview"
-            product={{ category: parent.category, color: parent.color }}
-            variant={{ color: currentVariant.color }}
-          />
+            <Route
+              path="*"
+              element={
+                <img
+                  className="detailsImage"
+                  src={resolvePublicUrl(
+                    currentVariant.images?.[activeImageIdx]?.big ||
+                      currentVariant.image
+                  )}
+                  alt={currentVariant.name}
+                />
+              }
+            />
+          </Routes>
           <ProductThumnail
             variant={currentVariant}
-            isAR={isAR}
             active={activeImageIdx}
             onChange={(idx) => {
+              if (isPreview) {
+                navigate(`/products/${routeId}`);
+              }
               setActiveImageIdx(idx);
-              setShowCam(false);
             }}
           >
-            <CameraThumnail available={isAR} isActive={showCam} onClick={(isActive) => {
-              setShowCam(isActive);
-              setActiveImageIdx(-1);
-            }}/>
+            <CameraThumnail
+              available={isAR}
+              isActive={showCam}
+              onClick={() => {
+                navigate(`/products/${routeId}/preview`);
+              }}
+            />
           </ProductThumnail>
         </div>
         <div className="detailsInfo">
@@ -126,7 +156,8 @@ export default function ProductDetails() {
                     v.id === currentVariant.id ? "variantActive" : ""
                   }`}
                   onClick={() => {
-                    navigate(`/products/${v.id}`);
+                    const url = isPreview ? `/products/${v.id}/preview` : `/products/${v.id}`;
+                    navigate(url);
                   }}
                   title={v.color?.name || v.name}
                 >
