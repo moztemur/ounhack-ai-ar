@@ -29,7 +29,7 @@ button:hover { background: #121933; }
 .productPrice { font-size: 14px; opacity: 0.9; }
 .backLink { display: inline-block; margin-bottom: 12px; color: #9fb4ff; }
 .details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
-.detailsImage { width: 100%; border-radius: 12px; border: 1px solid #222939; }
+.detailsImage { width: 100%; border-radius: 12px; border: 1px solid #222939; height: 500px; }
 .detailsInfo { background: #121620; border: 1px solid #222939; border-radius: 12px; padding: 16px; }
 .detailsName { margin: 0 0 6px; }
 .detailsCategory { font-size: 12px; opacity: .8; margin-bottom: 6px; }
@@ -45,7 +45,7 @@ button:hover { background: #121933; }
 .thumbActive { outline: 2px solid #9fb4ff; outline-offset: 2px; }
 .camIcon { display: grid; place-items: center; width: 72px; height: 54px; background: #0f1320; border-radius: 6px; }
 .videoPreview { background: #000; object-fit: cover; }
-.videoContainer { position: relative; width: 100%; height: auto; display: block; height: 350px; }
+.videoContainer { position: relative; width: 100%; height: auto; display: block; height: 500px; }
 .videoContainer video, .videoContainer canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
 /* Variant selector */

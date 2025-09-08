@@ -28,6 +28,8 @@ export default function VideoPreviewTF(props: Props) {
   const sceneRef = useRef<THREE.Scene | null>(null);
 
   const lipMeshRef = useRef<THREE.Mesh | null>(null);
+  const lipFeather1MeshRef = useRef<THREE.Mesh | null>(null);
+  const lipFeather2MeshRef = useRef<THREE.Mesh | null>(null);
   const initRef = useRef<boolean>(false);
 
 
@@ -81,12 +83,12 @@ export default function VideoPreviewTF(props: Props) {
        * then pass it them to the updateLipGeometry method
        **/ 
 
-      // const matFeather1 = new THREE.MeshBasicMaterial({ color: 0x800080, transparent: true, opacity: 0.18, depthTest: false, depthWrite: false });
-      // const matFeather2 = new THREE.MeshBasicMaterial({ color: 0x800080, transparent: true, opacity: 0.09, depthTest: false, depthWrite: false });
-      // lipFeather1Mesh = new THREE.Mesh(new THREE.ShapeGeometry(new THREE.Shape()), matFeather1);
-      // lipFeather2Mesh = new THREE.Mesh(new THREE.ShapeGeometry(new THREE.Shape()), matFeather2);
-      // scene.add(lipFeather1Mesh);
-      // scene.add(lipFeather2Mesh);
+      const matFeather1 = new THREE.MeshBasicMaterial({ color: variant?.color?.hex, transparent: true, opacity: 0.18, depthTest: false, depthWrite: false });
+      const matFeather2 = new THREE.MeshBasicMaterial({ color: variant?.color?.hex, transparent: true, opacity: 0.09, depthTest: false, depthWrite: false });
+      lipFeather1MeshRef.current = new THREE.Mesh(new THREE.ShapeGeometry(new THREE.Shape()), matFeather1);
+      lipFeather2MeshRef.current = new THREE.Mesh(new THREE.ShapeGeometry(new THREE.Shape()), matFeather2);
+      sceneRef.current.add(lipFeather1MeshRef.current);
+      sceneRef.current.add(lipFeather2MeshRef.current);
 
       resizeToVideo();
     };
@@ -168,6 +170,8 @@ export default function VideoPreviewTF(props: Props) {
       cameraRef.current = null;
       sceneRef.current = null;
       lipMeshRef.current = null;
+      lipFeather1MeshRef.current = null;
+      lipFeather2MeshRef.current = null;
     };
 
     const loop = async () => {
@@ -175,7 +179,7 @@ export default function VideoPreviewTF(props: Props) {
       const faces = await detectorRef.current!.estimateFaces(videoRef.current!);
       if (faces && faces[0]) {
         const [face] = faces;
-        updateLipGeometry(face.keypoints, videoRef.current!, lipMeshRef.current!);
+        updateLipGeometry(face.keypoints, videoRef.current!, lipMeshRef.current!, lipFeather1MeshRef.current!, lipFeather2MeshRef.current!);
       }
 
       rendererRef.current!.render(sceneRef.current!, cameraRef.current!);

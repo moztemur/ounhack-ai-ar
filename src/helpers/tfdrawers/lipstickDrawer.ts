@@ -212,8 +212,9 @@ function buildShapeWithHolesPx(
   const shape = new THREE.Shape();
   const p0 = outerOrtho[0];
   shape.moveTo(p0[0], p0[1]);
-  for (let i = 1; i < outerOrtho.length; i++)
+  for (let i = 1; i < outerOrtho.length; i++) {
     shape.lineTo(outerOrtho[i][0], outerOrtho[i][1]);
+  }
   shape.closePath();
 
   shape.holes = [];
@@ -231,7 +232,9 @@ function buildShapeWithHolesPx(
 export function updateLipGeometry(
   pts: any,
   video: HTMLVideoElement,
-  mesh: THREE.Mesh
+  mesh: THREE.Mesh,
+  feather1Mesh: THREE.Mesh,
+  feather2Mesh: THREE.Mesh
 ) {
   // 1) Smooth keypoints and collect loops in pixel space
   const outerPx = collectSmoothedPointsPx(LIPS_OUTER_ALL, pts);
@@ -248,15 +251,37 @@ export function updateLipGeometry(
 
   // TODO: feather addition
   // 4) Feather ring with stable geometry (annulus strip)
-  // const outerF1 = dilatePointsPx(outerPx, BASE_OUTER_DILATE_PX + FEATHER_WIDTHS_PX[0]);
-  // const outerF1Ortho = splinePointsPxToOrthoVectors(outerF1);
-  // const outerBaseOrtho = splinePointsPxToOrthoVectors(outerBase);
-  // const ring1Geom = buildRingGeometryFromOrthoLoops(outerF1Ortho, outerBaseOrtho);
-  // lipFeather1Mesh.geometry.dispose();
-  // lipFeather1Mesh.geometry = ring1Geom;
+  const outerF1 = dilatePointsPx(
+    outerPx,
+    BASE_OUTER_DILATE_PX + FEATHER_WIDTHS_PX[0]
+  );
+  const outerF1Ortho = splinePointsPxToOrthoVectors(outerF1, video);
+  const outerBaseOrtho = splinePointsPxToOrthoVectors(outerBase, video);
+  const ring1Geom = buildRingGeometryFromOrthoLoops(
+    outerF1Ortho,
+    outerBaseOrtho
+  );
+  feather1Mesh.geometry.dispose();
+  feather1Mesh.geometry = ring1Geom;
 
-  // // const outerF2 = dilatePointsPx(outerPx, BASE_OUTER_DILATE_PX + FEATHER_WIDTHS_PX[1]);
-  // // const ring2Shape = buildShapeWithHolesPx(outerF2, [outerF1, innerBase]);
-  // // lipFeather2Mesh.geometry.dispose();
-  // // lipFeather2Mesh.geometry = new THREE.ShapeGeometry(ring2Shape);
+  const outerF2 = dilatePointsPx(
+    outerPx,
+    BASE_OUTER_DILATE_PX + FEATHER_WIDTHS_PX[1]
+  );
+  const outerF2Ortho = splinePointsPxToOrthoVectors(outerF2, video);
+  const ring2Geom = buildRingGeometryFromOrthoLoops(outerF2Ortho, outerF1Ortho);
+  feather2Mesh.geometry.dispose();
+  feather2Mesh.geometry = ring2Geom;
+
+  // const outerF2 = dilatePointsPx(
+  //   outerPx,
+  //   BASE_OUTER_DILATE_PX + FEATHER_WIDTHS_PX[1]
+  // );
+  // const ring2Shape = buildShapeWithHolesPx(
+  //   outerF2,
+  //   [outerF1, innerBase],
+  //   video
+  // );
+  // feather2Mesh.geometry.dispose();
+  // feather2Mesh.geometry = new THREE.ShapeGeometry(ring2Shape);
 }
