@@ -45,7 +45,7 @@ button:hover { background: #121933; }
 .thumbActive { outline: 2px solid #9fb4ff; outline-offset: 2px; }
 .camIcon { display: grid; place-items: center; width: 72px; height: 54px; background: #0f1320; border-radius: 6px; }
 .videoPreview { background: #000; object-fit: cover; }
-.videoContainer { position: relative; width: 100%; height: auto; display: block; }
+.videoContainer { position: relative; width: 100%; height: auto; display: block; height: 350px; }
 .videoContainer video, .videoContainer canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
 /* Variant selector */
