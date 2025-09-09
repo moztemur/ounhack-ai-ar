@@ -2,6 +2,7 @@ import { HashRouter, BrowserRouter, Routes, Route, Navigate } from 'react-router
 import ProductList from './pages/ProductList'
 import ProductDetails from './pages/ProductDetails'
 import ProductDetails2 from './pages/ProductDetails2'
+import ProductList2 from './pages/ProductList2'
 
 export default function App() {
   return (
@@ -9,7 +10,8 @@ export default function App() {
       <Routes>
         {/* <Route path="/" element={<ProductList />} /> */}
         {/* <Route path="/products/:id/*" element={<ProductDetails />} /> */}
-        <Route path="/:id/*" element={<ProductDetails2 />} />
+        <Route path="/" element={<ProductList2 />} />
+        <Route path="/products/:id/*" element={<ProductDetails2 />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

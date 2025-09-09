@@ -24,7 +24,7 @@ export default function ProductDetails2() {
   const items = products as Product[];
   const routeId = String(id);
   const navigate = useNavigate();
-  const isPreview = useMatch("/:id/preview");
+  const isPreview = useMatch("products/:id/preview");
 
   const { parent, initialVariant } = useMemo(() => {
     const direct = items.find((p) => p.id === routeId);
@@ -85,6 +85,13 @@ export default function ProductDetails2() {
     return isAR;
   }, [parent.category]);
 
+  useEffect(() => {
+    document.querySelectorAll(".BreadcrumbNav ol li").forEach((el) => {
+      // @ts-ignore
+      el.style.visibility = "visible";
+    });
+  }, []);
+
   return (
     <>
       <div
@@ -115,7 +122,7 @@ export default function ProductDetails2() {
               onClick={() => {
                 setActiveImageIdx(index);
                 if (isPreview) {
-                  navigate(`/${routeId}`);
+                  navigate(`/products/${routeId}`);
                 }
               }}
             >
@@ -215,7 +222,7 @@ export default function ProductDetails2() {
           {parent.products?.map((v, idx) => (
             <li key={idx}>
               <Link
-                to={isPreview ? `/${v.id}/preview` : `/${v.id}`}
+                to={isPreview ? `/products/${v.id}/preview` : `/products/${v.id}`}
                 title={v.color?.name}
                 tabIndex={0}
                 className={`ColorSelection-color ${
@@ -237,12 +244,13 @@ export default function ProductDetails2() {
         >
           Add to bag
         </button>
-        <Link to={`/${currentVariant.id}/preview`} className="ButtonV1 PDPDesktop-addToBagButton secondary">
+        <Link to={`/products/${currentVariant.id}/preview`} className="ButtonV1 PDPDesktop-addToBagButton secondary">
           <button
             type="button"
             aria-label="Add to bag"
             className="ButtonV1 PDPDesktop-addToBagButton secondary"
           >
+            <img src="/static/camera-circle-svgrepo-com.svg" width={25} height={25} style={{marginRight: 10}} alt="Icon" />
             Try Shade On
           </button>
         </Link>
