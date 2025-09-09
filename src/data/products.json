@@ -1,188 +1,67 @@
 [
   {
     "id": "1",
-    "name": "Matte Lipstick",
-    "price": 14.99,
-    "description": "Velvety matte lipstick with long-lasting color and comfortable wear.",
+    "name": "It's M·A·C Lipstick 3g",
+    "price": 125,
+    "description": "Experience glamour in a glide with this revamped sheer and shiny M·A·C Lipstick formula. ",
     "category": ["Makeup", "Lips", "Lipstick"],
-    "color": { "name": "Rose Pink", "hex": "#FF69B4" },
+    "color": { "name": "Thanks, It's M¬∑A¬∑C!", "hex": "#C3B5D0" },
     "products": [
       {
-        "id": "1",
-        "name": "Matte Lipstick - Rose Pink",
-        "price": 14.99,
+        "id": "3-see-sheer-lustreglass-lipstick-3g",
+        "name": "See Sheer Lustreglass Lipstick, 3g",
+        "price": 105,
         "image": "/images/1/1/mid-1.svg",
         "images": [
-          { "big": "/images/1/1/big-1.svg", "middle": "/images/1/1/mid-1.svg", "thumbnail": "/images/1/1/thumb-1.svg" },
-          { "big": "/images/1/1/big-2.svg", "middle": "/images/1/1/mid-2.svg", "thumbnail": "/images/1/1/thumb-2.svg" },
-          { "big": "/images/1/1/big-3.svg", "middle": "/images/1/1/mid-3.svg", "thumbnail": "/images/1/1/thumb-3.svg" }
+          { "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214698817_nocolor_in.jpg?ts=1628439247.1544", "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698817_nocolor_in.jpg?ts=1628439247.1544" },
+          { "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214698817_nocolor_fr.jpg?ts=1628439247.1544", "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698817_nocolor_fr.jpg?ts=1628439247.1544"}
         ],
-        "color": { "name": "Rose Pink", "hex": "#FF69B4" }
+        "color": { "name": "See Sheer", "hex": "#D2756B" }
       },
       {
-        "id": "1-burgundy",
-        "name": "Matte Lipstick - Burgundy",
-        "price": 19.99,
-        "image": "/images/1/1-burgundy/mid-1.svg",
+        "id": "3-moody-bloom-black-cherry-lipstick-3g",
+        "name": "Moody Bloom Black Cherry Lipstick, 3g",
+        "price": 109,
+        "image": "/images/1/1/mid-1.svg",
         "images": [
-          { "big": "/images/1/1-burgundy/big-1.svg", "middle": "/images/1/1-burgundy/mid-1.svg", "thumbnail": "/images/1/1-burgundy/thumb-1.svg" },
-          { "big": "/images/1/1-burgundy/big-2.svg", "middle": "/images/1/1-burgundy/mid-2.svg", "thumbnail": "/images/1/1-burgundy/thumb-2.svg" },
-          { "big": "/images/1/1-burgundy/big-3.svg", "middle": "/images/1/1-burgundy/mid-3.svg", "thumbnail": "/images/1/1-burgundy/thumb-3.svg" }
+          { "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362833_nocolor_in.jpg?ts=1613896444.2548", "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362833_nocolor_in.jpg?ts=1613896444.2548" },
+          { "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362833_nocolor_e1.jpg?ts=1613896444.2548", "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362833_nocolor_e1.jpg?ts=1613896444.2548" }
         ],
-        "color": { "name": "Burgundy", "hex": "#8B0000" }
+        "color": { "name": "Moody Bloom Black Cherry Lipstick", "hex": "#B11F22" }
       },
       {
-        "id": "1-fuchsia",
-        "name": "Matte Lipstick - Fuchsia",
-        "price": 14.99,
-        "image": "/images/1/1-fuchsia/mid-1.svg",
+        "id": "3-business-casual-lustreglass-lipstick-3g",
+        "name": "Business Casual Lustreglass Lipstick, 3g",
+        "price": 130,
+        "image": "/images/1/1/mid-1.svg",
         "images": [
-          { "big": "/images/1/1-fuchsia/big-1.svg", "middle": "/images/1/1-fuchsia/mid-1.svg", "thumbnail": "/images/1/1-fuchsia/thumb-1.svg" },
-          { "big": "/images/1/1-fuchsia/big-2.svg", "middle": "/images/1/1-fuchsia/mid-2.svg", "thumbnail": "/images/1/1-fuchsia/thumb-2.svg" },
-          { "big": "/images/1/1-fuchsia/big-3.svg", "middle": "/images/1/1-fuchsia/mid-3.svg", "thumbnail": "/images/1/1-fuchsia/thumb-3.svg" }
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214698822_nocolor_in.jpg?ts=1627458142.1944",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698822_nocolor_in.jpg?ts=1627458142.1944"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214698822_nocolor_fr.jpg?ts=1627458142.1944",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698822_nocolor_fr.jpg?ts=1627458142.1944"
+          }
         ],
-        "color": { "name": "Fuchsia", "hex": "#FF00A8" }
-      }
-    ]
-  },
-  {
-    "id": "2",
-    "name": "Hydrating Lip Gloss",
-    "price": 12.5,
-    
-    "description": "High-shine gloss that hydrates and adds a plumping effect.",
-    "category": ["Makeup", "Lips", "Lip Gloss"],
-    "color": { "name": "Pink", "hex": "#FF8FB3" },
-    "products": [
-      {
-        "id": "2",
-        "name": "Hydrating Lip Gloss - Pink",
-        "price": 12.5,
-        "image": "/images/2/2/mid-1.svg",
-        "images": [
-          { "big": "/images/2/2/big-1.svg", "middle": "/images/2/2/mid-1.svg", "thumbnail": "/images/2/2/thumb-1.svg" },
-          { "big": "/images/2/2/big-2.svg", "middle": "/images/2/2/mid-2.svg", "thumbnail": "/images/2/2/thumb-2.svg" },
-          { "big": "/images/2/2/big-3.svg", "middle": "/images/2/2/mid-3.svg", "thumbnail": "/images/2/2/thumb-3.svg" }
-        ],
-        "color": { "name": "Pink", "hex": "#FF8FB3" }
+        "color": { "name": "Business Casual", "hex": "#a22c51" }
       },
       {
-        "id": "2-peony",
-        "name": "Hydrating Lip Gloss - Peony Pink",
-        "price": 12.5,
-        "image": "/images/2/2-peony/mid-1.svg",
+        "id": "3-hug-me-lustreglass-lipstick-3g",
+        "name": "Hug Me Lustreglass Lipstick, 3g",
+        "price": 142,
+        "image": "/images/1/1/mid-1.svg",
         "images": [
-          { "big": "/images/2/2-peony/big-1.svg", "middle": "/images/2/2-peony/mid-1.svg", "thumbnail": "/images/2/2-peony/thumb-1.svg" },
-          { "big": "/images/2/2-peony/big-2.svg", "middle": "/images/2/2-peony/mid-2.svg", "thumbnail": "/images/2/2-peony/thumb-2.svg" },
-          { "big": "/images/2/2-peony/big-3.svg", "middle": "/images/2/2-peony/mid-3.svg", "thumbnail": "/images/2/2-peony/thumb-3.svg" }
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214698816_nocolor_in.jpg?ts=1628439237.1664",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698816_nocolor_in.jpg?ts=1628439237.1664"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214698816_nocolor_fr.jpg?ts=1628439237.1664",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698816_nocolor_fr.jpg?ts=1628439237.1664"
+          }
         ],
-        "color": { "name": "Peony Pink", "hex": "#FF8FB3" }
-      },
-      {
-        "id": "2-cotton",
-        "name": "Hydrating Lip Gloss - Cotton Candy",
-        "price": 12.5,
-        "image": "/images/2/2-cotton/mid-1.svg",
-        "images": [
-          { "big": "/images/2/2-cotton/big-1.svg", "middle": "/images/2/2-cotton/mid-1.svg", "thumbnail": "/images/2/2-cotton/thumb-1.svg" },
-          { "big": "/images/2/2-cotton/big-2.svg", "middle": "/images/2/2-cotton/mid-2.svg", "thumbnail": "/images/2/2-cotton/thumb-2.svg" },
-          { "big": "/images/2/2-cotton/big-3.svg", "middle": "/images/2/2-cotton/mid-3.svg", "thumbnail": "/images/2/2-cotton/thumb-3.svg" }
-        ],
-        "color": { "name": "Cotton Candy", "hex": "#FFC0E0" }
-      }
-    ]
-  },
-  {
-    "id": "3",
-    "name": "Nude Palette",
-    "price": 24.0,
-    
-    "description": "Everyday eyeshadow palette with 9 blendable neutral shades.",
-    "category": ["Makeup", "Eyes", "Eyeshadow Palette"],
-    "color": { "name": "Neutrals", "hex": "#BFA27A" },
-    "products": [
-      {
-        "id": "3",
-        "name": "Nude Palette - Neutrals",
-        "price": 24.0,
-        "image": "/images/3/3/mid-1.svg",
-        "images": [
-          { "big": "/images/3/3/big-1.svg", "middle": "/images/3/3/mid-1.svg", "thumbnail": "/images/3/3/thumb-1.svg" },
-          { "big": "/images/3/3/big-2.svg", "middle": "/images/3/3/mid-2.svg", "thumbnail": "/images/3/3/thumb-2.svg" },
-          { "big": "/images/3/3/big-3.svg", "middle": "/images/3/3/mid-3.svg", "thumbnail": "/images/3/3/thumb-3.svg" }
-        ],
-        "color": { "name": "Neutrals", "hex": "#BFA27A" }
-      },
-      {
-        "id": "3-warm",
-        "name": "Nude Palette - Warm Neutrals",
-        "price": 24.0,
-        "image": "/images/3/3-warm/mid-1.svg",
-        "images": [
-          { "big": "/images/3/3-warm/big-1.svg", "middle": "/images/3/3-warm/mid-1.svg", "thumbnail": "/images/3/3-warm/thumb-1.svg" },
-          { "big": "/images/3/3-warm/big-2.svg", "middle": "/images/3/3-warm/mid-2.svg", "thumbnail": "/images/3/3-warm/thumb-2.svg" },
-          { "big": "/images/3/3-warm/big-3.svg", "middle": "/images/3/3-warm/mid-3.svg", "thumbnail": "/images/3/3-warm/thumb-3.svg" }
-        ],
-        "color": { "name": "Warm Neutrals", "hex": "#BFA27A" }
-      },
-      {
-        "id": "3-soft",
-        "name": "Nude Palette - Soft Neutrals",
-        "price": 24.0,
-        "image": "/images/3/3-soft/mid-1.svg",
-        "images": [
-          { "big": "/images/3/3-soft/big-1.svg", "middle": "/images/3/3-soft/mid-1.svg", "thumbnail": "/images/3/3-soft/thumb-1.svg" },
-          { "big": "/images/3/3-soft/big-2.svg", "middle": "/images/3/3-soft/mid-2.svg", "thumbnail": "/images/3/3-soft/thumb-2.svg" },
-          { "big": "/images/3/3-soft/big-3.svg", "middle": "/images/3/3-soft/mid-3.svg", "thumbnail": "/images/3/3-soft/thumb-3.svg" }
-        ],
-        "color": { "name": "Soft Neutrals", "hex": "#C8B18E" }
-      }
-    ]
-  },
-  {
-    "id": "4",
-    "name": "Precision Eyeliner",
-    "price": 9.99,
-    
-    "description": "Smudge-proof liquid eyeliner with an ultra-fine tip.",
-    "category": ["Makeup", "Eyes", "Eyeliner"],
-    "color": { "name": "Black", "hex": "#000000" },
-    "products": [
-      {
-        "id": "4",
-        "name": "Precision Eyeliner - Black",
-        "price": 9.99,
-        "image": "/images/4/4/mid-1.svg",
-        "images": [
-          { "big": "/images/4/4/big-1.svg", "middle": "/images/4/4/mid-1.svg", "thumbnail": "/images/4/4/thumb-1.svg" },
-          { "big": "/images/4/4/big-2.svg", "middle": "/images/4/4/mid-2.svg", "thumbnail": "/images/4/4/thumb-2.svg" },
-          { "big": "/images/4/4/big-3.svg", "middle": "/images/4/4/mid-3.svg", "thumbnail": "/images/4/4/thumb-3.svg" }
-        ],
-        "color": { "name": "Black", "hex": "#000000" }
-      },
-      {
-        "id": "4-brown",
-        "name": "Precision Eyeliner - Brown",
-        "price": 9.99,
-        "image": "/images/4/4-brown/mid-1.svg",
-        "images": [
-          { "big": "/images/4/4-brown/big-1.svg", "middle": "/images/4/4-brown/mid-1.svg", "thumbnail": "/images/4/4-brown/thumb-1.svg" },
-          { "big": "/images/4/4-brown/big-2.svg", "middle": "/images/4/4-brown/mid-2.svg", "thumbnail": "/images/4/4-brown/thumb-2.svg" },
-          { "big": "/images/4/4-brown/big-3.svg", "middle": "/images/4/4-brown/mid-3.svg", "thumbnail": "/images/4/4-brown/thumb-3.svg" }
-        ],
-        "color": { "name": "Brown", "hex": "#4B2E2E" }
-      },
-      {
-        "id": "4-charcoal",
-        "name": "Precision Eyeliner - Charcoal",
-        "price": 9.99,
-        "image": "/images/4/4-charcoal/mid-1.svg",
-        "images": [
-          { "big": "/images/4/4-charcoal/big-1.svg", "middle": "/images/4/4-charcoal/mid-1.svg", "thumbnail": "/images/4/4-charcoal/thumb-1.svg" },
-          { "big": "/images/4/4-charcoal/big-2.svg", "middle": "/images/4/4-charcoal/mid-2.svg", "thumbnail": "/images/4/4-charcoal/thumb-2.svg" },
-          { "big": "/images/4/4-charcoal/big-3.svg", "middle": "/images/4/4-charcoal/mid-3.svg", "thumbnail": "/images/4/4-charcoal/thumb-3.svg" }
-        ],
-        "color": { "name": "Charcoal", "hex": "#36454F" }
+        "color": { "name": "Hug Me", "hex": "#A65D57" }
       }
     ]
   }

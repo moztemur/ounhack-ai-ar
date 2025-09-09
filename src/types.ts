@@ -1,4 +1,4 @@
-export type ImageSet = { big: string; middle: string; thumbnail: string };
+export type ImageSet = { big: string; thumbnail: string };
 
 export type Variant = {
   id: string;

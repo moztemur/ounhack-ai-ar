@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <mask fill="#ffffff" id="b">
+    <circle cx="15" cy="15" r="15" />
+  </mask>
+  <circle fill="#bc242c" cx="15" cy="15" r="15" />
+  <path fill="#ffffff" d="M-1 0h8.3L15 3 7.3 6 15 9l-7.7 3 7.7 3-7.7 3 7.7 3-7.7 3 7.7 3-7.7 3H-1z" mask="url(#b)" />
+</svg>

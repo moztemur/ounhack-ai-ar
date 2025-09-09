@@ -2,11 +2,6 @@ import React from "react";
 import { ImageSet, Variant } from "src/types";
 import { resolvePublicUrl } from '../utils/asset'
 
-{
-  /* <button key={idx} className={`thumb ${idx === activeImageIdx ? 'thumbActive' : ''}`} onClick={() => { setShowCam(false); setActiveImageIdx(idx) }} aria-label={`Show image ${idx + 1}`}>
-<img src={resolvePublicUrl(img.thumbnail)} alt={`thumb ${idx + 1}`} />
-</button> */
-}
 
 const VariantImageWithButton = (props: {
   image: ImageSet;

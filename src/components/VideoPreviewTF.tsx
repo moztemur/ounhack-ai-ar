@@ -70,7 +70,7 @@ export default function VideoPreviewTF(props: Props) {
       const matFill = new THREE.MeshBasicMaterial({
         color: variant?.color?.hex,
         transparent: true,
-        opacity: 0.35,
+        opacity: 0.5,
         depthTest: false,
         depthWrite: false,
       });
@@ -182,7 +182,9 @@ export default function VideoPreviewTF(props: Props) {
         updateLipGeometry(face.keypoints, videoRef.current!, lipMeshRef.current!, lipFeather1MeshRef.current!, lipFeather2MeshRef.current!);
       }
 
-      rendererRef.current!.render(sceneRef.current!, cameraRef.current!);
+      if (rendererRef.current != null) {
+        rendererRef.current!.render(sceneRef.current!, cameraRef.current!);
+      }
     };
 
     const init = async () => {
@@ -197,7 +199,7 @@ export default function VideoPreviewTF(props: Props) {
       clearTimeout(initTimeoutRef.current);
     }
 
-    initTimeoutRef.current = setTimeout(init, 350);
+    initTimeoutRef.current = setTimeout(init, 500);
 
     return () => {
       if (rafRef.current) {
