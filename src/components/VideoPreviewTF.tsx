@@ -4,6 +4,8 @@ import "@tensorflow/tfjs-backend-webgl";
 import * as faceLandmarksDetection from "@tensorflow-models/face-landmarks-detection";
 import * as THREE from "three";
 import { updateLipGeometry } from "../helpers/tfdrawers/lipstickDrawer";
+import { updateEyelinerGeometry } from "../helpers/tfdrawers/eyelinerDrawer";
+import { updateBlushGeometry } from "../helpers/tfdrawers/blushDrawer";
 
 type Props = {
   isActive: boolean;
@@ -30,6 +32,13 @@ export default function VideoPreviewTF(props: Props) {
   const lipMeshRef = useRef<THREE.Mesh | null>(null);
   const lipFeather1MeshRef = useRef<THREE.Mesh | null>(null);
   const lipFeather2MeshRef = useRef<THREE.Mesh | null>(null);
+
+  const leftEyelinerMeshRef = useRef<THREE.Mesh | null>(null);
+  const rightEyelinerMeshRef = useRef<THREE.Mesh | null>(null);
+
+  const leftBlushMeshRef = useRef<THREE.Mesh | null>(null);
+  const rightBlushMeshRef = useRef<THREE.Mesh | null>(null);
+
   const initRef = useRef<boolean>(false);
 
 
@@ -81,7 +90,7 @@ export default function VideoPreviewTF(props: Props) {
       /**
        * if you need to use feather effect you should change the following code as reference by using react.useRef 
        * then pass it them to the updateLipGeometry method
-       **/ 
+       **/
 
       const matFeather1 = new THREE.MeshBasicMaterial({ color: variant?.color?.hex, transparent: true, opacity: 0.18, depthTest: false, depthWrite: false });
       const matFeather2 = new THREE.MeshBasicMaterial({ color: variant?.color?.hex, transparent: true, opacity: 0.09, depthTest: false, depthWrite: false });
@@ -89,6 +98,60 @@ export default function VideoPreviewTF(props: Props) {
       lipFeather2MeshRef.current = new THREE.Mesh(new THREE.ShapeGeometry(new THREE.Shape()), matFeather2);
       sceneRef.current.add(lipFeather1MeshRef.current);
       sceneRef.current.add(lipFeather2MeshRef.current);
+
+
+      // Eyeliner meshes (thin ribbons above upper eyelids)
+      const matEyeliner = new THREE.MeshBasicMaterial({ color: variant?.color?.hex, transparent: true, opacity: 0.9, depthTest: false, depthWrite: false, side: THREE.DoubleSide });
+      leftEyelinerMeshRef.current = new THREE.Mesh(new THREE.BufferGeometry(), matEyeliner);
+      rightEyelinerMeshRef.current = new THREE.Mesh(new THREE.BufferGeometry(), matEyeliner);
+      leftEyelinerMeshRef.current.frustumCulled = false;
+      rightEyelinerMeshRef.current.frustumCulled = false;
+      rightEyelinerMeshRef.current.frustumCulled = false;
+      // Ensure eyeliner renders on top of foundation/other transparent meshes
+      leftEyelinerMeshRef.current.renderOrder = 10;
+      rightEyelinerMeshRef.current.renderOrder = 10;
+      sceneRef.current.add(leftEyelinerMeshRef.current);
+      sceneRef.current.add(rightEyelinerMeshRef.current);
+
+
+      // Blush
+      const matBlushCore = new THREE.ShaderMaterial({
+        transparent: true,
+        depthTest: false,
+        depthWrite: false,
+        // blending: THREE.AdditiveBlending,   // <--- here
+        uniforms: {
+          uColor: { value: new THREE.Color(variant?.color?.hex) },
+          uOpacity: { value: 0.10 },
+        },
+        vertexShader: /* glsl */`
+            varying vec2 vUv;
+            void main() {
+            vUv = uv; // pass UVs if needed later
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }
+        `,
+        fragmentShader: /* glsl */`
+            uniform vec3 uColor;
+            uniform float uOpacity;
+            varying vec2 vUv;
+            void main() {
+            gl_FragColor = vec4(uColor, uOpacity);
+            }
+        `
+      });
+
+      const shape = new THREE.Shape(/* your contour */);
+      const geom = new THREE.ShapeGeometry(shape);
+
+      leftBlushMeshRef.current  = new THREE.Mesh(geom, matBlushCore);
+      leftBlushMeshRef.current.renderOrder = 999; // draw on top of other transparents if needed
+
+      rightBlushMeshRef.current = new THREE.Mesh(geom, matBlushCore);
+      rightBlushMeshRef.current.renderOrder = 999; // draw on top of other transparents if needed
+
+      sceneRef.current.add(leftBlushMeshRef.current);
+      sceneRef.current.add(rightBlushMeshRef.current);
 
       resizeToVideo();
     };
@@ -179,7 +242,13 @@ export default function VideoPreviewTF(props: Props) {
       const faces = await detectorRef.current!.estimateFaces(videoRef.current!);
       if (faces && faces[0]) {
         const [face] = faces;
-        updateLipGeometry(face.keypoints, videoRef.current!, lipMeshRef.current!, lipFeather1MeshRef.current!, lipFeather2MeshRef.current!);
+        if (product?.category.includes("Lipstick")) {
+          updateLipGeometry(face.keypoints, videoRef.current!, lipMeshRef.current!, lipFeather1MeshRef.current!, lipFeather2MeshRef.current!);
+        } else if (product?.category.includes("Eyeliner")) {
+          updateEyelinerGeometry(face.keypoints, videoRef.current!, leftEyelinerMeshRef.current!, rightEyelinerMeshRef.current!);
+        } else if (product?.category.includes("Blush")) {
+          updateBlushGeometry(face.keypoints, videoRef.current!, leftBlushMeshRef.current!, rightBlushMeshRef.current!);
+        }
       }
 
       if (rendererRef.current != null) {

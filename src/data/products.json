@@ -4,8 +4,15 @@
     "name": "It's M·A·C Lipstick 3g",
     "price": 125,
     "description": "Experience glamour in a glide with this revamped sheer and shiny M·A·C Lipstick formula. ",
-    "category": ["Makeup", "Lips", "Lipstick"],
-    "color": { "name": "Thanks, It's M¬∑A¬∑C!", "hex": "#C3B5D0" },
+    "category": [
+      "Makeup",
+      "Lips",
+      "Lipstick"
+    ],
+    "color": {
+      "name": "Thanks, It's M¬∑A¬∑C!",
+      "hex": "#C3B5D0"
+    },
     "products": [
       {
         "id": "3-see-sheer-lustreglass-lipstick-3g",
@@ -13,10 +20,19 @@
         "price": 105,
         "image": "/images/1/1/mid-1.svg",
         "images": [
-          { "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214698817_nocolor_in.jpg?ts=1628439247.1544", "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698817_nocolor_in.jpg?ts=1628439247.1544" },
-          { "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214698817_nocolor_fr.jpg?ts=1628439247.1544", "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698817_nocolor_fr.jpg?ts=1628439247.1544"}
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214698817_nocolor_in.jpg?ts=1628439247.1544",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698817_nocolor_in.jpg?ts=1628439247.1544"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214698817_nocolor_fr.jpg?ts=1628439247.1544",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698817_nocolor_fr.jpg?ts=1628439247.1544"
+          }
         ],
-        "color": { "name": "See Sheer", "hex": "#D2756B" }
+        "color": {
+          "name": "See Sheer",
+          "hex": "#D2756B"
+        }
       },
       {
         "id": "3-moody-bloom-black-cherry-lipstick-3g",
@@ -24,10 +40,19 @@
         "price": 109,
         "image": "/images/1/1/mid-1.svg",
         "images": [
-          { "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362833_nocolor_in.jpg?ts=1613896444.2548", "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362833_nocolor_in.jpg?ts=1613896444.2548" },
-          { "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362833_nocolor_e1.jpg?ts=1613896444.2548", "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362833_nocolor_e1.jpg?ts=1613896444.2548" }
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362833_nocolor_in.jpg?ts=1613896444.2548",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362833_nocolor_in.jpg?ts=1613896444.2548"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362833_nocolor_e1.jpg?ts=1613896444.2548",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362833_nocolor_e1.jpg?ts=1613896444.2548"
+          }
         ],
-        "color": { "name": "Moody Bloom Black Cherry Lipstick", "hex": "#B11F22" }
+        "color": {
+          "name": "Moody Bloom Black Cherry Lipstick",
+          "hex": "#B11F22"
+        }
       },
       {
         "id": "3-business-casual-lustreglass-lipstick-3g",
@@ -44,7 +69,10 @@
             "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698822_nocolor_fr.jpg?ts=1627458142.1944"
           }
         ],
-        "color": { "name": "Business Casual", "hex": "#a22c51" }
+        "color": {
+          "name": "Business Casual",
+          "hex": "#a22c51"
+        }
       },
       {
         "id": "3-hug-me-lustreglass-lipstick-3g",
@@ -61,9 +89,212 @@
             "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214698816_nocolor_fr.jpg?ts=1628439237.1664"
           }
         ],
-        "color": { "name": "Hug Me", "hex": "#A65D57" }
+        "color": {
+          "name": "Hug Me",
+          "hex": "#A65D57"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "M·A·C Liquid Eyeliner",
+    "price": 95,
+    "description": "Create precise, dramatic lines with M·A·C's long-lasting liquid eyeliner. Perfect for creating everything from subtle definition to bold cat eyes.",
+    "category": [
+      "Makeup",
+      "Eyes",
+      "Eyeliner"
+    ],
+    "color": {
+      "name": "Carbon Black",
+      "hex": "#000000"
+    },
+    "products": [
+      {
+        "id": "2-brushstroke-liner-black",
+        "name": "Brushstroke Liner, Black",
+        "price": 95,
+        "image": "/images/3/1/mid-1.svg",
+        "images": [
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_in.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_in.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_fr.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_fr.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_cu.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_cu.jpg"
+          }
+        ],
+        "color": {
+          "name": "Carbon Black",
+          "hex": "#000000"
+        }
+      },
+      {
+        "id": "2-brushstroke-liner-brown",
+        "name": "Brushstroke Liner, Brown",
+        "price": 95,
+        "image": "/images/3/1/mid-1.svg",
+        "images": [
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_in.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_in.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_fr.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_fr.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_cu.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_cu.jpg"
+          }
+        ],
+        "color": {
+          "name": "Rich Brown",
+          "hex": "#3B2621"
+        }
+      },
+      {
+        "id": "2-brushstroke-liner-deep-sea",
+        "name": "Brushstroke Liner, Deep Sea",
+        "price": 95,
+        "image": "/images/3/1/mid-1.svg",
+        "images": [
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_in.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_in.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_fr.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_fr.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_cu.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_cu.jpg"
+          }
+        ],
+        "color": {
+          "name": "Deep Sea",
+          "hex": "#22445C"
+        }
+      },
+      {
+        "id": "2-brushstroke-liner-ivy",
+        "name": "Brushstroke Liner, Ivy",
+        "price": 95,
+        "image": "/images/3/1/mid-1.svg",
+        "images": [
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_in.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_in.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_fr.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_fr.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214525939_nocolor_cu.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214525939_nocolor_cu.jpg"
+          }
+        ],
+        "color": {
+          "name": "Ivy",
+          "hex": "#62435A"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "M·A·C Powder Blush",
+    "price": 115,
+    "description": "A modern take on traditional powder blush. This defining powder features a luxuriously soft and dense texture that blends evenly with a luminous finish.",
+    "category": [
+      "Makeup",
+      "Face",
+      "Blush"
+    ],
+    "color": {
+      "name": "Peaches",
+      "hex": "#F7A08C"
+    },
+    "products": [
+      {
+        "id": "3-peaches-powder-blush",
+        "name": "Peaches Powder Blush",
+        "price": 115,
+        "image": "/images/3/1/mid-1.svg",
+        "images": [
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362519_nocolor_in.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362519_nocolor_in.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362519_nocolor_fr.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362519_nocolor_fr.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362519_nocolor_e1.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362519_nocolor_e1.jpg"
+          }
+        ],
+        "color": {
+          "name": "Peaches",
+          "hex": "#F7A08C"
+        }
+      },
+      {
+        "id": "3-melba-powder-blush",
+        "name": "Melba Powder Blush",
+        "price": 115,
+        "image": "/images/3/1/mid-1.svg",
+        "images": [
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362519_nocolor_in.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362519_nocolor_in.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362519_nocolor_fr.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362519_nocolor_fr.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362519_nocolor_e1.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362519_nocolor_e1.jpg"
+          }
+        ],
+        "color": {
+          "name": "Melba",
+          "hex": "#E8977B"
+        }
+      },
+      {
+        "id": "3-desert-rose-powder-blush",
+        "name": "Desert Rose Powder Blush",
+        "price": 115,
+        "color": {
+          "name": "Desert Rose",
+          "hex": "#C25B5B"
+        },
+        "images": [
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362519_nocolor_in.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362519_nocolor_in.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362519_nocolor_fr.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362519_nocolor_fr.jpg"
+          },
+          {
+            "big": "https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214362519_nocolor_e1.jpg",
+            "thumbnail": "https://ounass-ae.atgcdn.ae/small_light(dw=81,ch=158,cc=fafafa,of=webp)/pub/media/catalog/product/2/1/214362519_nocolor_e1.jpg"
+          }
+        ]
       }
     ]
   }
 ]
-
